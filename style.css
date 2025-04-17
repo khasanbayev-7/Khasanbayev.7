@@ -1,101 +1,556 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
 
-  header h1 {
-    font-size: 24px; /* Oldingi o‘lchamdan kichikroq */
-    margin: 5px 0;
-  }
-  
-  
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #e9ecef;
-  }
-  
-  .about {
-    padding: 40px 20px;
-    margin: auto;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f8fb; /* Juda yengil fon rang */
-    color: #333;
-  }
-  
-  .hero, .about {
-    background: linear-gradient(to bottom right, #90acc7, #dbe6f1); /* To‘qroq ko‘kdan oq gradient */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
 
-    text-align: center;
-    color: #333;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Yumshoq soyalar */
-    margin-bottom: 20px; /* Bo‘limlar orasida bo‘shliq */
-  }
-  
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%; /* Doira shakli */
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* To‘qroq soya */
-  }
-  
-  h3 {
-    margin-top: 20px;
-    color: #2c3e50; /* Silliq va ko‘rinadigan matn rangi */
-  }
-  
-  p {
-    color: #444; /* Matn rangini ko‘zga o‘xshash qilish */
-  }
-  
+header h1 {
+  font-size: 24px; /* Kichikroq sarlavha o‘lchami */
+  margin: 5px 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #007acc;
+}
+
+
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e9ecef;
+}
+
+.about {
+  padding: 40px 20px;
+  margin: auto;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f8fb; /* Juda yengil fon rang */
+  color: #333;
+}
+
+.hero, .about {
+  background: linear-gradient(to bottom right, #90acc7, #dbe6f1); /* To‘qroq ko‘kdan oq gradient */
+
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Yumshoq soyalar */
+  margin-bottom: 20px; /* Bo‘limlar orasida bo‘shliq */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Doira shakli */
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* To‘qroq soya */
+}
+
+h3 {
+  margin-top: 20px;
+  color: #2c3e50; /* Silliq va ko‘rinadigan matn rangi */
+}
+
+p {
+  color: #444; /* Matn rangini ko‘zga o‘xshash qilish */
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.profile-pic:hover {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+h2, h3 {
+  transition: all 0.4s ease;
+}
+
+h2:hover, h3:hover {
+  color: #007acc;
+  transform: translateY(-5px);
+}
+
+p {
+  transition: all 0.4s ease;
+}
+
+p:hover {
+  color: #222;
+  text-shadow: 0 0 10px rgba(0, 163, 204, 0.4);
+}
+
+/* Header */
+.site-header {
+background-color: #0a0a23;
+color: #ccc;
+text-align: center;
+padding: 20px 0;
+font-size: 20px;
+font-family: 'Segoe UI', sans-serif;
+transition: background-color 0.3s ease;
+}
+
+.site-header:hover {
+background-color: #111136;
+color: #ffffff;
+}
+
+.site-header h1 {
+font-size: 24px;
+margin: 17px 0; /* h1 bilan boshqa elementlar orasiga bo'shliq qo'shildi */
+}
+
+.site-header nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.site-header nav ul li {
+display: inline-block;
+margin: 0 15px;
+}
+
+.site-header nav ul li a {
+color: #ccc;
+text-decoration: none;
+font-size: 15px;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.site-header nav ul li a:hover {
+color: #007acc;
+}
+
+/* Footer */
+.site-footer {
+background-color: #0a0a23;
+color: #ccc;
+text-align: center;
+padding: 20px 0;
+font-size: 14px;
+font-family: 'Segoe UI', sans-serif;
+transition: background-color 0.3s ease;
+}
+
+.site-footer:hover {
+background-color: #111136;
+color: #ffffff;
+}
+
+
+/* Blog bo'limi dizayni */
+.blog {
+background: linear-gradient(to bottom right, #90acc7, #dbe6f1); /* To‘qroq ko‘kdan oq gradient */
+text-align: center;
+color: #333;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Yumshoq soyalar */
+margin-bottom: 20px; /* Bo‘limlar orasida bo‘shliq */
+padding: 40px 20px;
+border-radius: 10px; /* Burchaklarni yumshatish */
+}
+
+.blog h2 {
+font-size: 32px;
+margin-bottom: 20px;
+}
+
+.blog p {
+font-size: 16px;
+color: #555;
+margin-bottom: 30px;
+}
+
+.blog-posts {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 30px;
+margin-top: 30px;
+}
+
+.blog-post {
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 20px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+transform: translateY(-10px);
+box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post h3 {
+font-size: 24px;
+margin-bottom: 15px;
+}
+
+.blog-post .post-meta {
+font-size: 14px;
+color: #888;
+margin-bottom: 15px;
+}
+
+.blog-post p {
+font-size: 16px;
+color: #333;
+margin-bottom: 20px;
+}
+
+.blog-post a {
+text-decoration: none;
+color: #007acc;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.blog-post a:hover {
+color: #005f99;
+}
+
+.blog-post button {
+background-color: #007acc;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.blog-post button:hover {
+background-color: #005f99;
+}
+
+.blog-post button {
+background-color: #007acc;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.blog-post button:hover {
+background-color: #005f99;
+}
+
+.blog-posts {
+display: flex;
+flex-wrap: wrap; /* Postlarni satrlarga ajratish */
+justify-content: center; /* Postlarni o'rtaga joylashtirish */
+gap: 20px; /* Postlar orasidagi bo'shliq */
+}
+
+.blog-post {
+background-color: #f4f4f4;
+padding: 20px;
+margin: 15px;
+border-radius: 8px;
+width: 300px; /* Har bir postning kengligi */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.blog-post button {
+background-color: #007acc;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.blog-post button:hover {
+background-color: #005f99;
+}
+
+
+.gallery {
+background: linear-gradient(to bottom right, #90acc7, #dbe6f1);
+text-align: center;
+color: #333;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+margin-bottom: 20px;
+padding: 40px 20px;
+border-radius: 10px;
+}
+
+.gallery h2 {
+font-size: 32px;
+margin-bottom: 15px;
+}
+
+.gallery p {
+font-size: 16px;
+color: #555;
+margin-bottom: 30px;
+}
+
+.image-gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.image-item {
+background-color: #fff;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+width: 200px;
+height: auto;
+border-radius: 8px;
+}
+
+.contact {
+background: linear-gradient(to bottom right, #90acc7, #dbe6f1);
+text-align: center;
+color: #333;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+margin-bottom: 20px;
+padding: 40px 20px;
+border-radius: 10px;
+}
+
+.contact h2 {
+font-size: 32px;
+margin-bottom: 15px;
+}
+
+.contact p {
+font-size: 16px;
+color: #555;
+margin-bottom: 30px;
+}
+
+.contact-form {
+max-width: 500px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+padding: 12px;
+border-radius: 8px;
+border: 1px solid #ccc;
+font-size: 16px;
+font-family: 'Segoe UI', sans-serif;
+transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+border-color: #007acc;
+outline: none;
+}
+
+.contact-form button {
+background-color: #007acc;
+color: white;
+padding: 12px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+background-color: #005f99;
+}
+
+/* Umumiy ko‘rinish, desktop uchun */
+body {
+font-family: 'Segoe UI', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+}
+
+/* Mobil qurilmalar uchun */
+@media (max-width: 768px) {
+/* Bosh sahifa header */
+header {
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+nav a {
+  font-size: 16px;
+}
+
+/* Hero bo‘lim */
+.hero img {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 24px;
+}
+
+.hero p {
+  font-size: 14px;
+}
+
+/* Blog postlar */
+.blog-posts {
+  grid-template-columns: 1fr; /* Bitta ustun */
+  gap: 15px;
+}
+
+.blog-post {
+  width: 100%; /* Kenglikni to‘liq e'lon qilish */
+  margin: 0;
+}
+
+/* Gallery */
+.image-gallery {
+  grid-template-columns: 1fr; /* Bitta ustun */
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%; /* Kengligi 100% */
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  width: 100%; /* Kengligi 100% */
+  padding: 15px;
+}
+}
+
+/* Yana kichik ekranlar uchun (mobil telefonlar) */
+@media (max-width: 480px) {
+header h1 {
+  font-size: 18px;
+}
+
+.hero h2 {
+  font-size: 20px;
+}
+
+.hero p {
+  font-size: 12px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 8px;
+}
+
+.contact-form button {
+  padding: 12px;
+}
+}
+
+.hero img {
+width: 200px; /* Aniq o‘lcham */
+height: 200px; /* Aniq o‘lcham */
+object-fit: cover; /* Tasvirni to‘liq sig‘diradi */
+}
