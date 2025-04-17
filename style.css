@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 24px; /* Oldingi o‘lchamdan kichikroq */
+    margin: 5px 0;
+  }
+  
+  
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e9ecef;
+  }
+  
+  .about {
+    padding: 40px 20px;
+    margin: auto;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb; /* Juda yengil fon rang */
+    color: #333;
+  }
+  
+  .hero, .about {
+    background: linear-gradient(to bottom right, #90acc7, #dbe6f1); /* To‘qroq ko‘kdan oq gradient */
+
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Yumshoq soyalar */
+    margin-bottom: 20px; /* Bo‘limlar orasida bo‘shliq */
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Doira shakli */
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* To‘qroq soya */
+  }
+  
+  h3 {
+    margin-top: 20px;
+    color: #2c3e50; /* Silliq va ko‘rinadigan matn rangi */
+  }
+  
+  p {
+    color: #444; /* Matn rangini ko‘zga o‘xshash qilish */
+  }
+  
