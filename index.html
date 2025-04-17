@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <h1>Mening Shaxsiy Saytim</h1>
     <nav>
       <ul>
         <li><a href="#">Bosh sahifa</a></li>
         <li><a href="#">Men haqimda</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Rasmlar</a></li>
-        <li><a href="#">Aloqa</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#gallery">Rasmlar</a></li>
+        <li><a href="#contact">Aloqa</a></li>
       </ul>
     </nav>
   </header>
@@ -28,15 +28,150 @@
     </section>
 
     <section class="about">
-      <h3>Men haqimda qisqacha</h3>
-      <p>Men IT sohasiga qiziqaman, web saytlar yaratishni yoqtiraman. Bo'sh vaqtimda kitob o‘qiyman va sayohat qilaman.</p>
+      <h2>Men haqimda qisqacha</h2>
+      <p>Men Khasanbayev Sobitxonman. Texnologiyalarga, ayniqsa, web dasturlashga juda qiziqaman. Maqsadim – kuchli va foydali web ilovalar yaratish orqali odamlarning hayotini osonlashtirish. Orzuyim – o‘z shaxsiy IT kompaniyamni ochish va dunyo miqyosida tanilgan dasturchiga aylanish. Men doimiy o‘rganishga intilaman va o‘z ustimda ishlashni yaxshi ko‘raman. Hozirda frontend va Backend sohasiga e’tibor qaratganman, kelajakda sun’iy intellekt yo‘nalishini ham chuqur o‘rganmoqchiman.</p>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 [Isming]. Barcha huquqlar himoyalangan.</p>
+<!-- Blog bo'limi -->
+<section id="blog" class="blog">
+  <h2>Blog</h2>
+  <p>Bu yerda mening blog postlarimni topishingiz mumkin. Yangi maqolalar, fikrlarim va tajriba hikoyalarimni doimiy ravishda yangilab turaman.</p>
+
+  <div class="blog-posts">
+    <!-- Birinchi post -->
+    <article class="blog-post">
+      <h3>Yangi Texnologiyalar haqida</h3>
+      <p class="post-meta">10-aprel, 2025 | Texnologiya</p>
+      <p id="post1-preview">Texnologiya dunyosi har kuni o‘zgarib bormoqda. Yangi dasturiy ta’minotlar va tizimlar rivojlanib, odamlarning hayotini osonlashtirmoqda...</p>
+      <button id="post1-btn" onclick="togglePost('post1')">To'liq o'qish</button>
+      <p id="post1-full" style="display: none;">Texnologiya dunyosi haqida batafsil ma'lumotlar. Yangi texnologiyalar, ilg'or dasturiy ta’minotlar haqida fikrlarimni bu yerda topishingiz mumkin...</p>
+    </article>
+
+    <!-- Ikkinchi post -->
+    <article class="blog-post">
+      <h3>Frontend Dasturlash: Boshlang'ich Qo‘llanma</h3>
+      <p class="post-meta">8-aprel, 2025 | Dasturlash</p>
+      <p id="post2-preview">Frontend dasturlash bo‘yicha boshlang‘ich uchun juda ko‘p imkoniyatlar mavjud. HTML, CSS va JavaScript asoslarini o‘rganish orqali siz...</p>
+      <button id="post2-btn" onclick="togglePost('post2')">To'liq o'qish</button>
+      <p id="post2-full" style="display: none;">Frontend dasturlash bo‘yicha ko‘proq ma'lumotlar, HTML va CSS asoslari, shuningdek, JavaScript bilan bog‘liq eng muhim resurslar haqida...</p>
+    </article>
+
+    <!-- Yangi uchinchi post -->
+    <article class="blog-post">
+      <h3>AI va Sun'iy Intellekt: Kelajakni O'rganish</h3>
+      <p class="post-meta">15-aprel, 2025 | Sun'iy Intellekt</p>
+      <p id="post3-preview">Sun'iy intellekt va uning kelajagi haqida ko‘p gapirilyapti. Yangi texnologiyalar sun'iy intellektni kundalik hayotimizga tobora kirib kelmoqda...</p>
+      <button id="post3-btn" onclick="togglePost('post3')">To'liq o'qish</button>
+      <p id="post3-full" style="display: none;">Sun'iy intellektni qanday qilib biznes, tibbiyot va boshqa sohalarda qo‘llash mumkinligi haqida batafsil ma'lumotlar...</p>
+    </article>
+
+    <!-- Yangi to'rtinchi post -->
+    <article class="blog-post">
+      <h3>Web Dasturlashda Dasturlash Tillari</h3>
+      <p class="post-meta">17-aprel, 2025 | Dasturlash</p>
+      <p id="post4-preview">Web dasturlashda foydalaniladigan tillar juda ko‘p, ammo asosiylari HTML, CSS va JavaScript. Har birining o‘z o‘rni va roli mavjud...</p>
+      <button id="post4-btn" onclick="togglePost('post4')">To'liq o'qish</button>
+      <p id="post4-full" style="display: none;">HTML, CSS va JavaScript asosida web sahifalarini qanday yaratish mumkinligi haqida batafsil tushuntirish...</p>
+    </article>  
+  </div>
+</section>
+
+
+
+<script>
+function togglePost(postId) {
+  var fullPost = document.getElementById(postId + '-full');
+  var previewPost = document.getElementById(postId + '-preview');
+  var button = document.getElementById(postId + '-btn');
+  
+  // Agar post to'liq ko'rsatilgan bo'lsa, uni yashirish va tugmani qayta ko'rsatish
+  if (fullPost.style.display === 'none') {
+    fullPost.style.display = 'block'; // To'liq matnni ko'rsatish
+    previewPost.style.display = 'none'; // Qisqacha matnni yashirish
+    button.style.display = 'none'; // Tugmani yashirish
+  } else {
+    fullPost.style.display = 'none'; // To'liq matnni yashirish
+    previewPost.style.display = 'block'; // Qisqacha matnni ko'rsatish
+    button.style.display = 'block'; // Tugmani qayta ko'rsatish
+  }
+}
+
+</script>
+<!-- Rasmlar bo'limi -->
+<section id="gallery" class="gallery">
+  <h2>Rasmlar</h2>
+  <p>Bu yerda men o'zimning sevimli rasmlarimni joyladim!</p>
+
+  <div class="image-gallery">
+    <!-- Rasmlar -->
+    <div class="image-item">
+      <img src="photo_1_2025-04-17_22-33-58.jpg" alt="Rasm 1" class="gallery-image" />
+    </div>
+    <div class="image-item">
+      <img src="photo_2_2025-04-17_22-33-58.jpg" alt="Rasm 2" class="gallery-image" />
+    </div>
+    <div class="image-item">
+      <img src="photo_3_2025-04-17_22-33-58.jpg" alt="Rasm 3" class="gallery-image" />
+    </div>
+    <div class="image-item">
+      <img src="photo_4_2025-04-17_22-33-58.jpg" alt="Rasm 4" class="gallery-image" />
+    </div>
+    <div class="image-item">
+      <img src="photo_6_2025-04-17_22-33-58.jpg" alt="Rasm 5" class="gallery-image" />
+    </div>
+    <div class="image-item">
+      <img src="photo_8_2025-04-17_22-33-58.jpg" alt="Rasm 6" class="gallery-image" />
+    </div>
+  </div>
+</section>
+
+
+    <!-- Aloqa bo'limi -->
+    <section id="contact" class="contact">
+      <h2>Aloqa</h2>
+      <p>Quyidagi forma orqali menga xabar yuborishingiz mumkin:</p>
+    
+      <form id="contact-form" action="https://formspree.io/f/xldjyepw" method="POST" class="contact-form">
+        <input type="text" name="ism" placeholder="Ismingiz" required>
+        <input type="email" name="email" placeholder="Email manzilingiz" required>
+        <textarea name="xabar" placeholder="Xabaringiz" rows="5" required></textarea>
+        <button type="submit">Yuborish</button>
+      </form>
+    
+      <p id="form-status" style="text-align: center; color: green; margin-top: 10px;"></p>
+    </section>
+    
+    <script>
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+    
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            status.textContent = "✅ Xabaringiz yuborildi!";
+            form.reset();
+          } else {
+            status.textContent = "❌ Xatolik yuz berdi. Iltimos, qayta urinib ko‘ring.";
+          }
+        }).catch(error => {
+          status.textContent = "⚠️ Server bilan aloqa uzildi.";
+        });
+      });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+  <footer class="site-footer">
+    <p>&copy; 2025 Khasanbayev Sobitxon. Barcha huquqlar himoyalangan.</p>
   </footer>
 </body>
 </html>
-
-
